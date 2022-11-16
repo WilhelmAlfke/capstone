@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "firefly",
+    "year": "",
+    "genre": ["sci-fi", "romance"],
+    "plot": "plotty-plotplot",
+    "picture": "/img/firefly.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "the vvitch",
+    "year": "2015",
+    "genre": "horror",
+    "plot": "In 1630 New England, panic and despair envelops a farmer, his wife and their children when youngest son Samuel suddenly vanishes. The family blames Thomasin, the oldest daughter who was watching the boy at the time of his disappearance. With suspicion and paranoia mounting, twin siblings Mercy and Jonas suspect Thomasin of witchcraft, testing the clan's faith, loyalty and love to one another.",
+    "picture": "/img/vvitch.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "the wire",
+    "year": "2002",
+    "genre": "crime",
+    "plot": "This series looks at the narcotics scene in Baltimore through the eyes of law enforcers as well as the drug dealers and users. Other facets of the city that are explored in the series are the government and bureaucracy, schools and the news media. The show was created by former police reporter David Simon, who also wrote many of the episodes.",
+    "picture": "/img/thewire.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "event horizon",
+    "year": "1997",
+    "genre": ["sci-fi", "horror"],
+    "plot": "When the Event Horizon, a spacecraft that vanished years earlier, suddenly reappears, a team is dispatched to investigate the ship. Accompanied by the Event Horizon's creator, William Weir (Sam Neill), the crew of the Lewis and Clark, led by Capt. Miller (Laurence Fishburne), begins to explore the seemingly abandoned vessel. However, it soon becomes evident that something sinister resides in its corridors, and that the horrors that befell the Event Horizon's previous journey are still present.",
+    "picture": "/img/eventhorizon.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "bojack horseman",
+    "year": "2014",
+    "genre": ["comedy", "satire", "cartoon"],
+    "plot": "A humanoid horse, BoJack Horseman -- lost in a sea of self-loathing and booze -- decides it's time for a comeback. Once the star of a '90s sitcom, in which he was the adoptive father of three orphaned kids (two girls and a boy). The show was the hottest thing around, then suddenly, was canceled. Now 18 years later, BoJack wants to regain his dignity. With the aid of a human sidekick and a feline ex-girlfriend who is his agent, he sets out to make it happen. But Hollywood is vastly different from those days, and getting used to stuff like Twitter may take some time. This first animated series from Netflix -- with plenty of references to sex, drugs and alcohol -- is not for the little ones.",
+    "picture": "/img/bojack.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "midsommar",
+    "year": "2019",
+    "genre": "horror",
+    "plot": "A young American couple, their relationship foundering, travel to a fabled Swedish midsummer festival where a seemingly pastoral paradise transforms into a sinister, dread-soaked nightmare as the locals reveal their terrifying agenda.",
+    "picture": "/img/midsommar.jpeg"
+  },
+  {
+    "id": 7,
+    "title": "epsiode v",
+    "year": "1980",
+    "genre": "fantasy",
+    "plot": "The adventure continues in this 'Star Wars' sequel. Luke Skywalker (Mark Hamill), Han Solo (Harrison Ford), Princess Leia (Carrie Fisher) and Chewbacca (Peter Mayhew) face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi master's help will Luke survive when the dark side of the Force beckons him into the ultimate duel with Darth Vader (David Prowse).",
+    "picture": "/img/episodev.jpeg"
+  }
+]
