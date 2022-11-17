@@ -1,35 +1,33 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export default function ListItemSquare({ movies }) {
+export default function SquareList({ movies }) {
   return (
-    <>
+    <ul>
       {movies.map((movie) => {
         return (
           <ListItem key={movie.id}>
-            <Image
-              // height={100}
-              // width={100}
-              layout="fill"
-              objectFit="cover"
-              alt="picture of movie poster"
+            <StyledImage
+              height={100}
+              width={100}
+              priority
+              alt={`movieposter of ${movie.name}`}
               src={movie.picture}
             />
           </ListItem>
         );
       })}
-    </>
+    </ul>
   );
 }
 
+const StyledImage = styled(Image)`
+  object-fit: cover;
+`;
+
 const ListItem = styled.li`
-  padding: 0;
   display: flex;
-  flex-direction: row;
   position: relative;
-  /* overflow: hidden; */
   margin-left: 10px;
   margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
 `;

@@ -1,4 +1,4 @@
-import ListItemSquare from "../components/ListItemSquare";
+import SquareList from "../components/SquareList";
 import useSWR from "swr";
 import { fetcher } from "../helpers/api";
 
@@ -12,13 +12,11 @@ export default function Home() {
   if (error) return <div>failed to load</div>;
 
   return (
-    <>
-      <main>
-        <h1>series & movies</h1>
-        <ul>
-          <ListItemSquare movies={movies} />
-        </ul>
-      </main>
-    </>
+    <main>
+      <h1>series & movies</h1>
+      <ul>
+        <SquareList movies={movies} />
+      </ul>
+    </main>
   );
 }
