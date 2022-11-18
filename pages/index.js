@@ -14,9 +14,8 @@ export default function Home() {
   return (
     <main>
       <h1>series & movies</h1>
-      <ul>
-        <SquareList movies={movies} />
-      </ul>
+
+      <SquareList movies={movies} />
     </main>
   );
 }
