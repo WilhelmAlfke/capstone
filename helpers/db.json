@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "firefly",
     "year": "2002",
     "genre": ["sci-fi", "romance"],
@@ -8,7 +8,7 @@
     "picture": "/img/firefly.jpeg"
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "the vvitch",
     "year": "2015",
     "genre": "horror",
@@ -16,7 +16,7 @@
     "picture": "/img/vvitch.jpeg"
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "the wire",
     "year": "2002",
     "genre": "crime",
@@ -24,7 +24,7 @@
     "picture": "/img/thewire.jpeg"
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "event horizon",
     "year": "1997",
     "genre": ["sci-fi", "horror"],
@@ -32,7 +32,7 @@
     "picture": "/img/eventhorizon.jpeg"
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "bojack horseman",
     "year": "2014",
     "genre": ["comedy", "satire", "cartoon"],
@@ -40,7 +40,7 @@
     "picture": "/img/bojack.jpeg"
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "midsommar",
     "year": "2019",
     "genre": "horror",
@@ -48,7 +48,7 @@
     "picture": "/img/midsommar.jpeg"
   },
   {
-    "id": 7,
+    "id": "7",
     "title": "epsiode v",
     "year": "1980",
     "genre": "fantasy",

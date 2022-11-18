@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function SquareList({ movies }) {
   return (
@@ -7,10 +7,9 @@ export default function SquareList({ movies }) {
       {movies.map((movie) => {
         return (
           <ListItem key={movie.id}>
-            <StyledImage
-              height={100}
-              width={100}
-              priority
+            <Image
+              layout="fill"
+              objectFit="cover"
               alt={`movieposter of ${movie.name}`}
               src={movie.picture}
             />
@@ -21,13 +20,11 @@ export default function SquareList({ movies }) {
   );
 }
 
-const StyledImage = styled(Image)`
-  object-fit: cover;
-`;
-
 const ListItem = styled.li`
   display: flex;
   position: relative;
   margin-left: 10px;
   margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
 `;
