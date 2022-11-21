@@ -1,30 +1,39 @@
 import styled from "styled-components";
 import Image from "next/legacy/image";
+import Link from "next/link";
 
 export default function SquareList({ movies }) {
   return (
-    <ul>
+    <MovieListGrid>
       {movies.map((movie) => {
         return (
           <ListItem key={movie.id}>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              alt={`movieposter of ${movie.name}`}
-              src={movie.picture}
-            />
+            <Link href={`/movies/${movie.id}`}>
+              <Image
+                layout="fill"
+                objectFit="cover"
+                priority
+                alt={`movieposter of ${movie.title}`}
+                src={movie.picture}
+              />
+            </Link>
           </ListItem>
         );
       })}
-    </ul>
+    </MovieListGrid>
   );
 }
 
 const ListItem = styled.li`
-  display: flex;
   position: relative;
   margin-left: 10px;
   margin-bottom: 10px;
   width: 100px;
   height: 100px;
+  list-style: none;
+`;
+
+const MovieListGrid = styled.ul`
+  display: grid;
+  grid-template-columns: auto auto;
 `;
