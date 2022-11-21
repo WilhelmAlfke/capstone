@@ -1,13 +1,18 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 export default function Header() {
-  return (
-    <>
-      <StyledHeader>
-        <p>Just Find It</p>
-      </StyledHeader>
-    </>
-  );
+  const { pathname } = useRouter();
+  console.log(pathname);
+
+  if (!pathname.startsWith("/movies"))
+    return (
+      <>
+        <StyledHeader>
+          <p>Just Find It</p>
+        </StyledHeader>
+      </>
+    );
 }
 
 const StyledHeader = styled.div`
