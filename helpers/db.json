@@ -11,7 +11,7 @@
     "id": "2",
     "title": "the vvitch",
     "year": "2015",
-    "genre": "horror",
+    "genre": ["horror"],
     "plot": "In 1630 New England, panic and despair envelops a farmer, his wife and their children when youngest son Samuel suddenly vanishes. The family blames Thomasin, the oldest daughter who was watching the boy at the time of his disappearance. With suspicion and paranoia mounting, twin siblings Mercy and Jonas suspect Thomasin of witchcraft, testing the clan's faith, loyalty and love to one another.",
     "picture": "/img/vvitch.jpeg"
   },
@@ -19,7 +19,7 @@
     "id": "3",
     "title": "the wire",
     "year": "2002",
-    "genre": "crime",
+    "genre": ["crime"],
     "plot": "This series looks at the narcotics scene in Baltimore through the eyes of law enforcers as well as the drug dealers and users. Other facets of the city that are explored in the series are the government and bureaucracy, schools and the news media. The show was created by former police reporter David Simon, who also wrote many of the episodes.",
     "picture": "/img/thewire.jpeg"
   },
@@ -43,7 +43,7 @@
     "id": "6",
     "title": "midsommar",
     "year": "2019",
-    "genre": "horror",
+    "genre": ["horror"],
     "plot": "A young American couple, their relationship foundering, travel to a fabled Swedish midsummer festival where a seemingly pastoral paradise transforms into a sinister, dread-soaked nightmare as the locals reveal their terrifying agenda.",
     "picture": "/img/midsommar.jpeg"
   },
@@ -51,7 +51,7 @@
     "id": "7",
     "title": "epsiode v",
     "year": "1980",
-    "genre": "fantasy",
+    "genre": ["fantasy"],
     "plot": "The adventure continues in this 'Star Wars' sequel. Luke Skywalker (Mark Hamill), Han Solo (Harrison Ford), Princess Leia (Carrie Fisher) and Chewbacca (Peter Mayhew) face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi master's help will Luke survive when the dark side of the Force beckons him into the ultimate duel with Darth Vader (David Prowse).",
     "picture": "/img/episodev.jpeg"
   }

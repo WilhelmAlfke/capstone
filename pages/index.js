@@ -1,15 +1,11 @@
 import SquareList from "../components/SquareList";
-import useSWR from "swr";
-import { fetcher } from "../helpers/api";
+// import DetailList from "../components/DetailList";
 
-export default function Home() {
-  const { data: movies, error } = useSWR("/api/movies", fetcher);
-
+export default function Home({ movies }) {
+  console.log(movies);
   if (!movies) {
     return <h2> loading..</h2>;
   }
-
-  if (error) return <div>failed to load</div>;
 
   return (
     <main>
