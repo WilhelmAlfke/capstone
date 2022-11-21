@@ -15,14 +15,11 @@ export default function MovieDetailPage({ movies }) {
   }
 
   const movieDetail = getMovieById(id);
-  //   console.log(movieDetail);
+
   if (!movieDetail) return <h2>loading..</h2>;
 
-  //   const splittingGenre = movieDetail.genre.split(",");
-  //   console.log(splittingGenre);
-
   return (
-    <>
+    <main>
       <h1>{movieDetail.title}</h1>
       <MovieImageContainer>
         <Image
@@ -45,7 +42,7 @@ export default function MovieDetailPage({ movies }) {
       </section>
 
       <Link href={"/"}>back</Link>
-    </>
+    </main>
   );
 }
 
