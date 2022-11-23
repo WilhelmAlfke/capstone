@@ -1,24 +1,22 @@
-import styled from "styled-components";
-import { useRouter } from "next/router";
+import styled, { css } from "styled-components";
 
-export default function Header() {
-  const { pathname } = useRouter();
-  console.log(pathname);
-
-  if (!pathname.startsWith("/movies"))
-    return (
-      <>
-        <StyledHeader>
-          <p>Just Find It</p>
-        </StyledHeader>
-      </>
-    );
+export default function Header({ headerTitle, variant }) {
+  return (
+    <StyledHeader variant={variant}>
+      <h1>{headerTitle} </h1>
+    </StyledHeader>
+  );
 }
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   position: fixed;
-  top: 0%;
+  top: 0;
   width: 100%;
   height: 8%;
-  background-color: darkgray;
+
+  ${({ variant }) =>
+    variant === "homepage" &&
+    css`
+      background-color: darkgray;
+    `}
 `;

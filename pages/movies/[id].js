@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../../components/Header";
 
 export default function MovieDetailPage({ movies }) {
   console.log(movies);
@@ -20,6 +21,7 @@ export default function MovieDetailPage({ movies }) {
 
   return (
     <main>
+      <Header headerTitle="detail" variant="detailspage" />
       <h1>{movieDetail.title}</h1>
       <MovieImageContainer>
         <Image
