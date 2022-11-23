@@ -19,4 +19,10 @@ const StyledHeader = styled.header`
     css`
       background-color: darkgray;
     `}
+
+  ${({ variant }) =>
+    variant === "detailpage" &&
+    css`
+      background-color: hotpink;
+    `}
 `;

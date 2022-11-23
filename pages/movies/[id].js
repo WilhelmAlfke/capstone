@@ -21,7 +21,7 @@ export default function MovieDetailPage({ movies }) {
 
   return (
     <main>
-      <Header headerTitle="detail" variant="detailspage" />
+      <Header headerTitle="detail" variant="detailpage" />
       <h1>{movieDetail.title}</h1>
       <MovieImageContainer>
         <Image
