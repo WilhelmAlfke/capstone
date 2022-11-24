@@ -7,11 +7,11 @@ export default function Home({ movies }) {
   }
 
   return (
-    <main>
+    <>
       <Header headerTitle="just find it" variant="homepage" />
-      <h1>series & movies</h1>
-
-      <SquareList movies={movies} />
-    </main>
+      <main>
+        <SquareList movies={movies} />
+      </main>
+    </>
   );
 }

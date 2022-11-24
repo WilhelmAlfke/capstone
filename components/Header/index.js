@@ -9,7 +9,7 @@ export default function Header({ headerTitle, variant }) {
 }
 
 const StyledHeader = styled.header`
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   height: 8%;
