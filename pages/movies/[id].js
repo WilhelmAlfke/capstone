@@ -24,10 +24,10 @@ export default function MovieDetailPage({ movies }) {
       <Header headerTitle={movieDetail.title} variant="detailpage" />
       <main>
         <MovieImageContainer>
-          <Image
+          <MovieImage
+            objectFit="cover"
+            fill
             src={movieDetail.picture}
-            width={384}
-            height={259.2}
             priority
             alt={`movieposter of ${movieDetail.title}`}
           />
@@ -48,13 +48,19 @@ export default function MovieDetailPage({ movies }) {
     </>
   );
 }
+const MovieImage = styled(Image)`
+  position: relative;
+`;
 
 const MovieImageContainer = styled.div`
   display: flex;
   position: relative;
+  width: 100vw;
+  height: 50vw;
 `;
 
 const GenreList = styled.ul`
+  padding: 0px;
   display: flex;
   justify-content: space-around;
   position: relative;

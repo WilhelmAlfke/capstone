@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
     }
 h1 {
 padding: 0;
-margin-top: 0;
+margin: 0;
 
 }
     
