@@ -4,12 +4,10 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
-import ToggleButton from "../../components/ToggleButton";
+import { useState } from "react";
 // import AddItem from "../../components/AddItem";
 
-export default function MovieDetailPage({ movies, toggleFunction, movieId }) {
-  console.log(movies);
-
+export default function MovieDetailPage({ movies, toggle, setToggle }) {
   const { query } = useRouter();
   const { id } = query;
 
@@ -20,6 +18,20 @@ export default function MovieDetailPage({ movies, toggleFunction, movieId }) {
   const movieDetail = getMovieById(id);
 
   if (!movieDetail) return <h2>loading..</h2>;
+
+  // function toggleMovie(id) {
+  //   setMovies((movies) => {
+  //     const newValue = movies.map((movie) => {
+  //       console.log(movie.id);
+  //       if (movie.id === id) {
+  //         return { ...movie, isAdded: !movie.isAdded };
+  //       } else {
+  //         return movie;
+  //       }
+  //     });
+  //     return newValue;
+  //   });
+  // }
 
   return (
     <>
@@ -38,7 +50,8 @@ export default function MovieDetailPage({ movies, toggleFunction, movieId }) {
           type="button"
           aria-label="Add/Remove Toggle Button"
           onClick={() => {
-            toggleFunction(movieId);
+            setToggle(!toggle);
+            console.log(toggle);
           }}
         >
           add to favorites
