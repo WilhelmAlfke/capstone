@@ -2,12 +2,12 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 
-export default function SquareList({ movies }) {
+export default function SquareList({ movies, toggleFunction }) {
   return (
     <MovieListGrid>
       {movies.map((movie) => {
-        return (
-          <ListItem key={movie.id}>
+        movie.isAdded && (
+          <ListItem key={movie.id} toggleFunction={toggleFunction}>
             <Link href={`/movies/${movie.id}`}>
               <Image
                 layout="fill"

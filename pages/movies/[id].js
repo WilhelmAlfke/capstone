@@ -4,8 +4,10 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
+import ToggleButton from "../../components/ToggleButton";
+// import AddItem from "../../components/AddItem";
 
-export default function MovieDetailPage({ movies }) {
+export default function MovieDetailPage({ movies, toggleFunction, movieId }) {
   console.log(movies);
 
   const { query } = useRouter();
@@ -32,6 +34,15 @@ export default function MovieDetailPage({ movies }) {
             alt={`movieposter of ${movieDetail.title}`}
           />
         </MovieImageContainer>
+        <Button
+          type="button"
+          aria-label="Add/Remove Toggle Button"
+          onClick={() => {
+            toggleFunction(movieId);
+          }}
+        >
+          add to favorites
+        </Button>
         <section>
           <p> {movieDetail.year} </p>
           <GenreList>
@@ -65,4 +76,17 @@ const GenreList = styled.ul`
   justify-content: space-around;
   position: relative;
   list-style: none;
+`;
+
+const Button = styled.button`
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: grey;
+
+  ${({ variant }) =>
+    variant === "added" &&
+    css`
+      background-color: hotpink;
+    `}
 `;

@@ -1,7 +1,7 @@
 import SquareList from "../components/SquareList";
 import Header from "../components/Header";
 
-export default function Home({ movies }) {
+export default function Home({ movies, toggleFunction }) {
   if (!movies) {
     return <h2> loading..</h2>;
   }
