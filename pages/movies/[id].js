@@ -4,15 +4,8 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
-import { useState } from "react";
-// import AddItem from "../../components/AddItem";
 
-export default function MovieDetailPage({
-  movies,
-  toggle,
-  setToggle,
-  toggleMovie,
-}) {
+export default function MovieDetailPage({ movies, toggleMovie }) {
   const { query } = useRouter();
   const { id } = query;
 
@@ -37,21 +30,24 @@ export default function MovieDetailPage({
             alt={`movieposter of ${movieDetail.title}`}
           />
         </MovieImageContainer>
-        <Button
-          type="button"
-          aria-label="Add/Remove Toggle Button"
-          onClick={() => {
-            toggleMovie();
-            console.log(toggle);
-          }}
-        >
-          add to favorites
-        </Button>
+
+        <WrapButton>
+          <Button
+            type="button"
+            aria-label="Add/Remove Toggle Button"
+            onClick={() => {
+              toggleMovie(movieDetail.id);
+            }}
+          >
+            add to favorites
+          </Button>
+        </WrapButton>
+
         <section>
           <p> {movieDetail.year} </p>
           <GenreList>
             {movieDetail.genre.map((tag) => {
-              return <li key={movieDetail.id}> {tag} </li>;
+              return <li key={movieDetail.genre}> {tag} </li>;
             })}
           </GenreList>
 
@@ -63,6 +59,7 @@ export default function MovieDetailPage({
     </>
   );
 }
+
 const MovieImage = styled(Image)`
   position: relative;
 `;
@@ -93,4 +90,10 @@ const Button = styled.button`
     css`
       background-color: hotpink;
     `}
+`;
+
+const WrapButton = styled.div`
+  &:hover ${Button} {
+    background-color: hotpink;
+  }
 `;

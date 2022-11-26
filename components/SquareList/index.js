@@ -2,16 +2,21 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 
-export default function SquareList({ movies, setMovies, toggle }) {
-  setMovies((oldValue) => {
-    const newValue = [...oldValue, isBookmarked];
-  });
-
+export default function SquareList({
+  movies,
+  toggleMovie,
+  setMovies,
+  isAdded,
+}) {
   return (
     <MovieListGrid>
-      {movies.map((movie) => {
-        toggle === true && (
-          <ListItem key={movie.id} toggleMovie={toggleMovie}>
+      {movies.filter((movie) => {
+        movie.isAdded === true && (
+          <ListItem
+            key={movie.id}
+            toggleMovie={toggleMovie}
+            setMovies={setMovies}
+          >
             <Link href={`/movies/${movie.id}`}>
               <Image
                 layout="fill"

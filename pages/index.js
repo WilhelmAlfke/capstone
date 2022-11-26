@@ -1,7 +1,7 @@
 import SquareList from "../components/SquareList";
 import Header from "../components/Header";
 
-export default function Home({ movies }) {
+export default function Home({ movies, setMovies }) {
   if (!movies) {
     return <h2> loading..</h2>;
   }
@@ -10,7 +10,7 @@ export default function Home({ movies }) {
     <>
       <Header headerTitle="just find it" variant="homepage" />
       <main>
-        <SquareList movies={movies} />
+        <SquareList movies={movies} setMovies={setMovies} />
       </main>
     </>
   );
