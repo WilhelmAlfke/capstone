@@ -10,25 +10,26 @@ export default function SquareList({
 }) {
   return (
     <MovieListGrid>
-      {movies.filter((movie) => {
-        movie.isAdded === true && (
-          <ListItem
-            key={movie.id}
-            toggleMovie={toggleMovie}
-            setMovies={setMovies}
-          >
-            <Link href={`/movies/${movie.id}`}>
-              <Image
-                layout="fill"
-                objectFit="cover"
-                priority
-                alt={`movieposter of ${movie.title}`}
-                src={movie.picture}
-              />
-            </Link>
-          </ListItem>
-        );
-      })}
+      {movies.map(
+        (movie) =>
+          movie.isAdded === true && (
+            <ListItem
+              key={movie.id}
+              toggleMovie={toggleMovie}
+              setMovies={setMovies}
+            >
+              <Link href={`/movies/${movie.id}`}>
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  priority
+                  alt={`movieposter of ${movie.title}`}
+                  src={movie.picture}
+                />
+              </Link>
+            </ListItem>
+          )
+      )}
     </MovieListGrid>
   );
 }
