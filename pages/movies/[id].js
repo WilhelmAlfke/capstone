@@ -7,7 +7,12 @@ import Header from "../../components/Header";
 import { useState } from "react";
 // import AddItem from "../../components/AddItem";
 
-export default function MovieDetailPage({ movies, toggle, setToggle }) {
+export default function MovieDetailPage({
+  movies,
+  toggle,
+  setToggle,
+  toggleMovie,
+}) {
   const { query } = useRouter();
   const { id } = query;
 
@@ -18,20 +23,6 @@ export default function MovieDetailPage({ movies, toggle, setToggle }) {
   const movieDetail = getMovieById(id);
 
   if (!movieDetail) return <h2>loading..</h2>;
-
-  // function toggleMovie(id) {
-  //   setMovies((movies) => {
-  //     const newValue = movies.map((movie) => {
-  //       console.log(movie.id);
-  //       if (movie.id === id) {
-  //         return { ...movie, isAdded: !movie.isAdded };
-  //       } else {
-  //         return movie;
-  //       }
-  //     });
-  //     return newValue;
-  //   });
-  // }
 
   return (
     <>
@@ -50,7 +41,7 @@ export default function MovieDetailPage({ movies, toggle, setToggle }) {
           type="button"
           aria-label="Add/Remove Toggle Button"
           onClick={() => {
-            setToggle(!toggle);
+            toggleMovie();
             console.log(toggle);
           }}
         >

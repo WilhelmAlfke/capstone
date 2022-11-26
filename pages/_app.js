@@ -3,9 +3,24 @@ import { useLocalStorage } from "../helpers/hooks.js";
 import moviesDb from "../helpers/db.json";
 import { useState } from "react";
 
+function toggleMovie(id) {
+  setMovies((movies) => {
+    const newValue = movies.map((movie) => {
+      console.log(movie.id);
+      if (movie.id === id) {
+        return { ...movie, isAdded: !movie.isAdded };
+      } else {
+        return movie;
+      }
+    });
+    return newValue;
+  });
+}
+
 function MyApp({ Component, pageProps }) {
   const [movies, setMovies] = useLocalStorage("movies", moviesDb);
   const [toggle, setToggle] = useState(false);
+
   return (
     <>
       <GlobalStyles />
@@ -13,8 +28,7 @@ function MyApp({ Component, pageProps }) {
         {...pageProps}
         movies={movies}
         setMovies={setMovies}
-        toggle={toggle}
-        setToggle={setToggle}
+        toggleMovie={toggleMovie}
       />
     </>
   );
