@@ -2,34 +2,24 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 
-export default function SquareList({
-  movies,
-  toggleMovie,
-  setMovies,
-  isAdded,
-}) {
+export default function SquareList({ movies }) {
   return (
     <MovieListGrid>
-      {movies.map(
-        (movie) =>
-          movie.isAdded === true && (
-            <ListItem
-              key={movie.id}
-              toggleMovie={toggleMovie}
-              setMovies={setMovies}
-            >
-              <Link href={`/movies/${movie.id}`}>
-                <Image
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                  alt={`movieposter of ${movie.title}`}
-                  src={movie.picture}
-                />
-              </Link>
-            </ListItem>
-          )
-      )}
+      {movies.map((movie) => {
+        return (
+          <ListItem key={movie.id}>
+            <Link href={`/movies/${movie.id}`}>
+              <Image
+                layout="fill"
+                objectFit="cover"
+                priority
+                alt={`movieposter of ${movie.title}`}
+                src={movie.picture}
+              />
+            </Link>
+          </ListItem>
+        );
+      })}
     </MovieListGrid>
   );
 }
