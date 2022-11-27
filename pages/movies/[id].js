@@ -39,7 +39,7 @@ export default function MovieDetailPage({ movies, toggleMovie }) {
               toggleMovie(movieDetail.id);
             }}
           >
-            add to favorites
+            add/remove
           </Button>
         </WrapButton>
 
