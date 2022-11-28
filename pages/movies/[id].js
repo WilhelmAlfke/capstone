@@ -1,11 +1,15 @@
 // import DetailList from "../../components/DetailList";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 
-export default function MovieDetailPage({ movies, toggleMovie }) {
+export default function MovieDetailPage({
+  movies,
+  toggleFavoriteMovie,
+  isAdded,
+}) {
   const { query } = useRouter();
   const { id } = query;
 
@@ -33,13 +37,14 @@ export default function MovieDetailPage({ movies, toggleMovie }) {
 
         <WrapButton>
           <Button
+            variant={!movieDetail.isAdded ? "add" : "remove"}
             type="button"
-            aria-label="Add/Remove Toggle Button"
+            aria-label="This button lets the user add or remove a movie/series to their favorites"
             onClick={() => {
-              toggleMovie(movieDetail.id);
+              toggleFavoriteMovie(movieDetail.id);
             }}
           >
-            add/remove
+            {!movieDetail.isAdded ? "add" : "remove"}
           </Button>
         </WrapButton>
 
@@ -86,14 +91,22 @@ const Button = styled.button`
   background-color: grey;
 
   ${({ variant }) =>
-    variant === "added" &&
+    variant === "remove" &&
     css`
       background-color: hotpink;
+    `}
+
+  ${({ variant }) =>
+    variant === "add" &&
+    css`
+      background-color: grey;
     `}
 `;
 
 const WrapButton = styled.div`
-  &:hover ${Button} {
-    background-color: hotpink;
+  @media (min-width: 1024px) {
+    &:hover ${Button} {
+      background-color: hotpink;
+    }
   }
 `;

@@ -3,31 +3,26 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 
-export default function Faves({ movies, toggleMovie, setMovies, isAdded }) {
+export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
     <>
       <Header headerTitle="favorites" variant="faves" />
       <MovieListGrid>
-        {movies.map(
-          (movie) =>
-            movie.isAdded === true && (
-              <ListItem
-                key={movie.id}
-                toggleMovie={toggleMovie}
-                setMovies={setMovies}
-              >
-                <Link href={`/movies/${movie.id}`}>
-                  <Image
-                    layout="fill"
-                    objectFit="cover"
-                    priority
-                    alt={`movieposter of ${movie.title}`}
-                    src={movie.picture}
-                  />
-                </Link>
-              </ListItem>
-            )
-        )}
+        {movies
+          .filter((movie) => movie.isAdded)
+          .map((movie) => (
+            <ListItem key={movie.id} toggleFavoriteMovie={toggleFavoriteMovie}>
+              <Link href={`/movies/${movie.id}`}>
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  priority
+                  alt={`movieposter of ${movie.title}`}
+                  src={movie.picture}
+                />
+              </Link>
+            </ListItem>
+          ))}
       </MovieListGrid>
 
       <p>
