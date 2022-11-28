@@ -14,11 +14,11 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 8%;
 
-  ${({ variant }) =>
-    variant === "homepage" &&
+  ${(({ variant }) => variant === "homepage",
+  "faves" &&
     css`
       background-color: darkgray;
-    `}
+    `)}
 
   ${({ variant }) =>
     variant === "detailpage" &&

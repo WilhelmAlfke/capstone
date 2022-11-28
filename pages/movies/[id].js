@@ -1,13 +1,15 @@
 // import DetailList from "../../components/DetailList";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
 
-export default function MovieDetailPage({ movies }) {
-  console.log(movies);
-
+export default function MovieDetailPage({
+  movies,
+  toggleFavoriteMovie,
+  isAdded,
+}) {
   const { query } = useRouter();
   const { id } = query;
 
@@ -32,11 +34,25 @@ export default function MovieDetailPage({ movies }) {
             alt={`movieposter of ${movieDetail.title}`}
           />
         </MovieImageContainer>
+
+        <WrapButton>
+          <Button
+            variant={!movieDetail.isAdded ? "add" : "remove"}
+            type="button"
+            aria-label="This button lets the user add or remove a movie/series to their favorites"
+            onClick={() => {
+              toggleFavoriteMovie(movieDetail.id);
+            }}
+          >
+            {!movieDetail.isAdded ? "add" : "remove"}
+          </Button>
+        </WrapButton>
+
         <section>
           <p> {movieDetail.year} </p>
           <GenreList>
             {movieDetail.genre.map((tag) => {
-              return <li key={movieDetail.id}> {tag} </li>;
+              return <li key={movieDetail.genre}> {tag} </li>;
             })}
           </GenreList>
 
@@ -48,6 +64,7 @@ export default function MovieDetailPage({ movies }) {
     </>
   );
 }
+
 const MovieImage = styled(Image)`
   position: relative;
 `;
@@ -65,4 +82,31 @@ const GenreList = styled.ul`
   justify-content: space-around;
   position: relative;
   list-style: none;
+`;
+
+const Button = styled.button`
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: grey;
+
+  ${({ variant }) =>
+    variant === "remove" &&
+    css`
+      background-color: hotpink;
+    `}
+
+  ${({ variant }) =>
+    variant === "add" &&
+    css`
+      background-color: grey;
+    `}
+`;
+
+const WrapButton = styled.div`
+  @media (min-width: 1024px) {
+    &:hover ${Button} {
+      background-color: hotpink;
+    }
+  }
 `;
