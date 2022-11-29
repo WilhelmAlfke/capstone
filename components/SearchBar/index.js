@@ -1,24 +1,25 @@
 import { useState } from "react";
-import { TextField } from "@mui/material";
-import List from "../../helpers/db.json";
 
-export default function SearchMovies() {
-  const [searchQuery, setSearchQuery] = useState();
-
-  const searchHandler = (movieSearch) => {
-    const lowerCase = movieSearch.target.value.toLowerCase();
-    setSearchQuery(lowerCase);
-  };
+export default function SearchBar({ onSearch }) {
+  const [input, setInput] = useState();
 
   return (
-    <>
-      <TextField
-        variant="outlined"
-        label="Search"
-        fullWidth
-        onChange={searchHandler}
-      />
-      <List input={inputText} />
-    </>
+    <form
+      on
+      Submit={(event) => {
+        event.preventDefaultDefault();
+        onSearch(input);
+      }}
+    >
+      <section>
+        <input
+          type="text"
+          placeholder="search"
+          input={input}
+          onChange={() => setInput(target.value)}
+        />
+        <button type="submit"></button>
+      </section>
+    </form>
   );
 }

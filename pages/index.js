@@ -1,6 +1,7 @@
 import SquareList from "../components/SquareList";
 import Header from "../components/Header";
 import Link from "next/link";
+import styled from "styled-components";
 
 export default function Home({ movies }) {
   if (!movies) {
