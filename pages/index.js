@@ -2,7 +2,7 @@ import SquareList from "../components/SquareList";
 import Header from "../components/Header";
 import Link from "next/link";
 import { useState } from "react";
-// import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/SearchBar";
 
 export default function Home({ movies }) {
   const [searchInput, setSearchInput] = useState("");
@@ -15,7 +15,8 @@ export default function Home({ movies }) {
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         {/* <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} /> */}
-        <SquareList movies={movies} />
+        <SearchBar movies={movies} placeholder="search.." />
+        {/* <SquareList movies={movies} /> */}
         <Link href="/faves">favorite list</Link>
       </main>
     </>
