@@ -54,7 +54,7 @@ export default function Searchbar({ placeholder, movies }) {
         onChange={inputHandler}
       />
       {searchQuery.length !== 0 && (
-        <GridList>
+        <MovieListGrid>
           {searchQuery.map((movie) => {
             return (
               <ListItem key={movie.id}>
@@ -70,7 +70,7 @@ export default function Searchbar({ placeholder, movies }) {
               </ListItem>
             );
           })}
-        </GridList>
+        </MovieListGrid>
       )}
     </SearchForm>
   );
@@ -80,7 +80,7 @@ const InputSearch = styled.input``;
 const SearchForm = styled.form`
   position: relative;
 `;
-const GridList = styled.ul`
+const MovieListGrid = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
 `;
