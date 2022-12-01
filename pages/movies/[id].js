@@ -24,7 +24,7 @@ export default function MovieDetailPage({
   return (
     <>
       <Header headerTitle={movieDetail.title} variant="detailpage" />
-      <main>
+      <StyledDetailMain>
         <MovieImageContainer>
           <MovieImage
             objectFit="cover"
@@ -34,9 +34,10 @@ export default function MovieDetailPage({
             alt={`movieposter of ${movieDetail.title}`}
           />
         </MovieImageContainer>
-
-        <WrapButton>
+        <DivContainer>
+          {/* <WrapButton> */}
           <Button
+            href={"#"}
             variant={!movieDetail.isAdded ? "add" : "remove"}
             type="button"
             aria-label="This button lets the user add or remove a movie/series to their favorites"
@@ -44,29 +45,36 @@ export default function MovieDetailPage({
               toggleFavoriteMovie(movieDetail.id);
             }}
           >
-            {!movieDetail.isAdded ? "add" : "remove"}
+            {" "}
+            <StyledButtonSpan>
+              {!movieDetail.isAdded ? "add" : "remove"}
+            </StyledButtonSpan>
           </Button>
-        </WrapButton>
-
-        <section>
-          <p> {movieDetail.year} </p>
+          {/* <StyledButtonText></StyledButtonText> */}
+          {/* </WrapButton> */}
+        </DivContainer>
+        <StyledSection>
+          <StyledParagraph> {movieDetail.year} </StyledParagraph>
           <GenreList>
             {movieDetail.genre.map((tag) => {
               return <li key={movieDetail.genre}> {tag} </li>;
             })}
           </GenreList>
 
-          <p> {movieDetail.plot} </p>
-        </section>
+          <StyledParagraph> {movieDetail.plot} </StyledParagraph>
+        </StyledSection>
 
         <Link href={"/"}>back</Link>
-      </main>
+      </StyledDetailMain>
     </>
   );
 }
-
+const StyledDetailMain = styled.main`
+  background-color: #ece6d3;
+`;
 const MovieImage = styled(Image)`
   position: relative;
+  filter: grayscale(60%);
 `;
 
 const MovieImageContainer = styled.div`
@@ -75,38 +83,85 @@ const MovieImageContainer = styled.div`
   width: 100vw;
   height: 50vw;
 `;
+const StyledParagraph = styled.p`
+  margin: 0;
+`;
 
 const GenreList = styled.ul`
   padding: 0px;
+
   display: flex;
-  justify-content: space-around;
+
   position: relative;
   list-style: none;
+  gap: 10px;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   position: relative;
-  width: 100%;
-  height: 20px;
-  background-color: grey;
+  margin-left: -20px;
+  margin-top: -15px;
+  /* -moz-transform: skew(20deg);
+  -o-transform: skew(20deg); */
+  transform: skew(45deg);
+  width: 25%;
+  height: 30px;
+  background-color: #7aa2cb;
+  border-style: none;
+  z-index: 5;
+  padding-left: 25px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px 0px;
 
   ${({ variant }) =>
     variant === "remove" &&
     css`
-      background-color: hotpink;
+      background-color: #7aa2cb;
+      color: #ece6d3;
     `}
 
   ${({ variant }) =>
     variant === "add" &&
     css`
-      background-color: grey;
+      background-color: #ece6d3;
+      color: #7aa2cb;
     `}
 `;
 
-const WrapButton = styled.div`
-  @media (min-width: 1024px) {
-    &:hover ${Button} {
-      background-color: hotpink;
-    }
-  }
+// const WrapButton = styled.div`
+//   @media (min-width: 1024px) {
+//     &:hover ${Button} {
+//       background-color: hotpink;
+//     }
+//   }
+// `;
+
+const DivContainer = styled.div`
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+  height: 25px;
+  background-color: #7aa2cb;
+  z-index: 0;
+`;
+
+const StyledSection = styled.section`
+  position: relative;
+  line-height: 1.2rem;
+  margin: 10px 45px;
+  width: 70%;
+  /* border-style: solid; */
+  /* border-radius: 8px; */
+  /* background-color: #475e76; */
+
+  padding: 1rem;
+`;
+
+const StyledButtonSpan = styled.span`
+  margin-top: 5px;
+  margin-left: 25px;
+  display: flex;
+  justify-content: left;
+  transform: skew(-45deg);
 `;

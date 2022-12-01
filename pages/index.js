@@ -3,8 +3,9 @@ import Header from "../components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import { css } from "styled-components";
 
-export default function Home({ movies }) {
+export default function Home({ movies, toggleFavoriteMovie }) {
   const [searchedWord, setSearchedWord] = useState("");
 
   if (!movies) {
@@ -25,10 +26,10 @@ export default function Home({ movies }) {
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         <StyledSearchBarWrapper>
-          <label htmlFor="">Find movie by title</label>
-          <input
+          <label htmlFor="" />
+          <StyledInput
             type="text"
-            placeholder="search movie title"
+            placeholder="type in movie title"
             value={searchedWord}
             onChange={inputHandler}
           />
@@ -53,6 +54,7 @@ export default function Home({ movies }) {
               );
             })}
         </MovieListGrid>
+
         <Link href="/faves">favorite list</Link>
       </main>
     </>
@@ -62,18 +64,37 @@ export default function Home({ movies }) {
 const StyledSearchBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  margin: 0 25px 0 25px;
+`;
+const StyledInput = styled.input`
+  margin-top: 15px;
+  border-color: #475e76;
+  border-radius: 5px;
+  padding: 10px;
 `;
 
 const MovieListGrid = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: space-between;
+  gap: 18px;
+  padding: 0;
 `;
 
 const ListItem = styled.li`
+  padding: 0;
+
   position: relative;
-  margin-left: 10px;
+
   margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   list-style: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ece6d3;
+  border-radius: 5px;
+  filter: grayscale(60%);
 `;
