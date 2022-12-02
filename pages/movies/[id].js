@@ -50,8 +50,6 @@ export default function MovieDetailPage({
               {!movieDetail.isAdded ? "add" : "remove"}
             </StyledButtonSpan>
           </Button>
-          {/* <StyledButtonText></StyledButtonText> */}
-          {/* </WrapButton> */}
         </DivContainer>
         <SectionContainer>
           <StyledSection>
@@ -65,8 +63,6 @@ export default function MovieDetailPage({
             <StyledParagraph> {movieDetail.plot} </StyledParagraph>
           </StyledSection>
         </SectionContainer>
-
-        <StyledLink href={"/"}>back</StyledLink>
       </StyledDetailMain>
     </>
   );
@@ -159,9 +155,4 @@ const StyledButtonSpan = styled.span`
   display: flex;
   justify-content: left;
   transform: skew(-45deg);
-`;
-
-const StyledLink = styled(Link)`
-  position: relative;
-  margin-bottom: 30px;
 `;

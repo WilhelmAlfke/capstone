@@ -24,10 +24,6 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
             </ListItem>
           ))}
       </MovieListGrid>
-
-      <p>
-        <Link href={"/"}>back to home</Link>
-      </p>
     </>
   );
 }

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import styled from "styled-components";
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, variant }) {
   const [movies, setMovies] = useLocalStorage("movies", moviesDb);
 
   function toggleFavoriteMovie(id) {

@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import { css } from "styled-components";
+import Footer from "../components/Footer";
+import Svg from "../components/Svg";
 
-export default function Home({ movies, toggleFavoriteMovie }) {
+export default function Home({ movies, toggleFavoriteMovie, variant }) {
   const [searchedWord, setSearchedWord] = useState("");
 
   if (!movies) {
@@ -54,9 +56,12 @@ export default function Home({ movies, toggleFavoriteMovie }) {
               );
             })}
         </MovieListGrid>
-
-        <Link href="/faves">favorite list</Link>
       </main>
+      <Footer>
+        <StyledLink href="/" aria-label="Navigate to landing page">
+          <Svg variant="home" />
+        </StyledLink>
+      </Footer>
     </>
   );
 }
@@ -97,4 +102,10 @@ const ListItem = styled.li`
   border-color: var(--primary-color);
   border-radius: 5px;
   filter: grayscale(60%);
+`;
+
+const StyledLink = styled(Link)`
+  position: relative;
+  margin-left: 10px;
+  color: #e97f7f;
 `;

@@ -41,7 +41,7 @@ h2 {
     --primary-color: #9eb5b3; 
     --secondary-color: #475e76;
     --third-color: #EDE9E8;
-    --fourth-color: #24a0ed;
+    --fourth-color: black;
 }
 `;
 

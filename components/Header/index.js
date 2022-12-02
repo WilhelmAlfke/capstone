@@ -12,8 +12,6 @@ export default function Header({ headerTitle, variant }) {
 }
 
 const StyledHeader = styled.header`
-  /* position: relative; */
-  /* top: 0; */
   width: 90%;
   height: 60px;
   margin-left: -50px;
@@ -26,7 +24,7 @@ const StyledHeader = styled.header`
   ${(({ variant }) => variant === "homepage",
   "faves" &&
     css`
-      background-color: #475e76;
+      background-color: var(--secondary-color);
     `)}
 
   ${({ variant }) =>
@@ -40,7 +38,6 @@ const HeaderContainer = styled.div`
   background-color: #ece6d3;
   width: 100%;
   height: 60px;
-  /* border-bottom: solid; */
   border-color: #475e76;
 
   ${(({ variant }) => variant === "homepage",
