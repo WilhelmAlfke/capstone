@@ -69,7 +69,7 @@ const StyledSearchBarWrapper = styled.div`
 `;
 const StyledInput = styled.input`
   margin-top: 15px;
-  border-color: #475e76;
+  border-color: var(--primary-color);
   border-radius: 5px;
   padding: 10px;
 `;
@@ -94,7 +94,7 @@ const ListItem = styled.li`
   list-style: none;
   border-style: solid;
   border-width: 2px;
-  border-color: #ece6d3;
+  border-color: var(--primary-color);
   border-radius: 5px;
   filter: grayscale(60%);
 `;

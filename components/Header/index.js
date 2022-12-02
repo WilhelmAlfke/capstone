@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
   ${({ variant }) =>
     variant === "detailpage" &&
     css`
-      background-color: #ece6d3;
+      background-color: var(--secondary-color);
     `}
 `;
 
@@ -46,12 +46,12 @@ const HeaderContainer = styled.div`
   ${(({ variant }) => variant === "homepage",
   "faves" &&
     css`
-      background-color: #ece6d3;
+      background-color: #e97f7f;
     `)}
 
   ${({ variant }) =>
     variant === "detailpage" &&
     css`
-      background-color: #7aa2cb;
+      background-color: var(--fourth-color);
     `}
 `;

@@ -33,15 +33,26 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
 }
 
 const ListItem = styled.li`
+  padding: 0;
+
   position: relative;
-  margin-left: 10px;
+
   margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   list-style: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ece6d3;
+  border-radius: 5px;
+  filter: grayscale(60%);
 `;
 
 const MovieListGrid = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: space-between;
+  gap: 18px;
+  padding: 0;
 `;

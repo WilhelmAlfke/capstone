@@ -53,24 +53,26 @@ export default function MovieDetailPage({
           {/* <StyledButtonText></StyledButtonText> */}
           {/* </WrapButton> */}
         </DivContainer>
-        <StyledSection>
-          <StyledParagraph> {movieDetail.year} </StyledParagraph>
-          <GenreList>
-            {movieDetail.genre.map((tag) => {
-              return <li key={movieDetail.genre}> {tag} </li>;
-            })}
-          </GenreList>
+        <SectionContainer>
+          <StyledSection>
+            <StyledParagraph> {movieDetail.year} </StyledParagraph>
+            <GenreList>
+              {movieDetail.genre.map((tag) => {
+                return <li key={movieDetail.genre}> {tag} </li>;
+              })}
+            </GenreList>
 
-          <StyledParagraph> {movieDetail.plot} </StyledParagraph>
-        </StyledSection>
+            <StyledParagraph> {movieDetail.plot} </StyledParagraph>
+          </StyledSection>
+        </SectionContainer>
 
-        <Link href={"/"}>back</Link>
+        <StyledLink href={"/"}>back</StyledLink>
       </StyledDetailMain>
     </>
   );
 }
 const StyledDetailMain = styled.main`
-  background-color: #ece6d3;
+  background-color: var(--third-color);
 `;
 const MovieImage = styled(Image)`
   position: relative;
@@ -101,12 +103,9 @@ const Button = styled(Link)`
   position: relative;
   margin-left: -20px;
   margin-top: -15px;
-  /* -moz-transform: skew(20deg);
-  -o-transform: skew(20deg); */
   transform: skew(45deg);
   width: 25%;
   height: 30px;
-  background-color: #7aa2cb;
   border-style: none;
   z-index: 5;
   padding-left: 25px;
@@ -117,45 +116,41 @@ const Button = styled(Link)`
   ${({ variant }) =>
     variant === "remove" &&
     css`
-      background-color: #7aa2cb;
-      color: #ece6d3;
+      background-color: var(--fourth-color);
+      color: #e97f7f;
     `}
 
   ${({ variant }) =>
     variant === "add" &&
     css`
-      background-color: #ece6d3;
+      background-color: var(--third-color);
       color: #7aa2cb;
     `}
 `;
-
-// const WrapButton = styled.div`
-//   @media (min-width: 1024px) {
-//     &:hover ${Button} {
-//       background-color: hotpink;
-//     }
-//   }
-// `;
 
 const DivContainer = styled.div`
   position: relative;
   margin-top: 0px;
   width: 100%;
   height: 25px;
-  background-color: #7aa2cb;
+  background-color: var(--secondary-color);
   z-index: 0;
 `;
 
+const SectionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
 const StyledSection = styled.section`
   position: relative;
   line-height: 1.2rem;
   margin: 10px 45px;
   width: 70%;
-  /* border-style: solid; */
-  /* border-radius: 8px; */
-  /* background-color: #475e76; */
-
   padding: 1rem;
+  border-style: solid;
+  border-color: var(--third-color);
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 4px 0px;
 `;
 
 const StyledButtonSpan = styled.span`
@@ -164,4 +159,9 @@ const StyledButtonSpan = styled.span`
   display: flex;
   justify-content: left;
   transform: skew(-45deg);
+`;
+
+const StyledLink = styled(Link)`
+  position: relative;
+  margin-bottom: 30px;
 `;

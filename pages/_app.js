@@ -1,8 +1,9 @@
 import GlobalStyles from "../components/GlobalStyles";
 import { useLocalStorage } from "../helpers/hooks.js";
 import moviesDb from "../helpers/db.json";
-// import { useEffect } from "react";
+import Footer from "../components/Footer";
 import { useState } from "react";
+import styled from "styled-components";
 
 export default function MyApp({ Component, pageProps }) {
   const [movies, setMovies] = useLocalStorage("movies", moviesDb);
@@ -27,6 +28,7 @@ export default function MyApp({ Component, pageProps }) {
         movies={movies}
         toggleFavoriteMovie={toggleFavoriteMovie}
       />
+      <Footer />
     </>
   );
 }
