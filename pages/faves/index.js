@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import Header from "../../components/Header";
+import Svg from "../../components/Svg";
+import Footer from "../../components/Footer";
 
 export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
@@ -24,9 +26,19 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
             </ListItem>
           ))}
       </MovieListGrid>
+      <Footer />
     </>
   );
 }
+
+const MovieListGrid = styled.ul`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: space-between;
+  gap: 18px;
+  padding: 0;
+`;
 
 const ListItem = styled.li`
   padding: 0;
@@ -39,16 +51,14 @@ const ListItem = styled.li`
   list-style: none;
   border-style: solid;
   border-width: 2px;
-  border-color: #ece6d3;
+  border-color: var(--primary-color);
   border-radius: 5px;
   filter: grayscale(60%);
 `;
 
-const MovieListGrid = styled.ul`
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
-  justify-items: space-between;
-  gap: 18px;
-  padding: 0;
+const StyledLink = styled(Link)`
+  position: relative;
+  margin-left: 10px;
+  color: #e97f7f;
+  z-index: 5;
 `;

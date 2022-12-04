@@ -4,6 +4,8 @@ import styled, { css } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Svg from "../../components/Svg";
 
 export default function MovieDetailPage({
   movies,
@@ -35,7 +37,6 @@ export default function MovieDetailPage({
           />
         </MovieImageContainer>
         <DivContainer>
-          {/* <WrapButton> */}
           <Button
             href={"#"}
             variant={!movieDetail.isAdded ? "add" : "remove"}
@@ -64,6 +65,11 @@ export default function MovieDetailPage({
           </StyledSection>
         </SectionContainer>
       </StyledDetailMain>
+      <Footer>
+        <StyledLink href="/" aria-label="Navigate to landing page">
+          <Svg variant="home" />
+        </StyledLink>
+      </Footer>
     </>
   );
 }
@@ -146,7 +152,7 @@ const StyledSection = styled.section`
   padding: 1rem;
   border-style: solid;
   border-color: var(--third-color);
-  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 4px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 `;
 
 const StyledButtonSpan = styled.span`
@@ -155,4 +161,10 @@ const StyledButtonSpan = styled.span`
   display: flex;
   justify-content: left;
   transform: skew(-45deg);
+`;
+
+const StyledLink = styled(Link)`
+  position: relative;
+  margin-left: 10px;
+  color: #e97f7f;
 `;

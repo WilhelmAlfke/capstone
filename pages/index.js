@@ -37,8 +37,6 @@ export default function Home({ movies, toggleFavoriteMovie, variant }) {
           />
         </StyledSearchBarWrapper>
         <MovieListGrid>
-          {/* conditional rendering: wenn sreachedWord (unser seach query) nicht null ist,
-          dann mÃķchten wir die Liste haben.*/}
           {searchedWord.length !== 0 &&
             searchResults.map((movie) => {
               return (
@@ -57,11 +55,7 @@ export default function Home({ movies, toggleFavoriteMovie, variant }) {
             })}
         </MovieListGrid>
       </main>
-      <Footer>
-        <StyledLink href="/" aria-label="Navigate to landing page">
-          <Svg variant="home" />
-        </StyledLink>
-      </Footer>
+      <Footer />
     </>
   );
 }
@@ -104,8 +98,13 @@ const ListItem = styled.li`
   filter: grayscale(60%);
 `;
 
-const StyledLink = styled(Link)`
-  position: relative;
-  margin-left: 10px;
-  color: #e97f7f;
-`;
+// const StyledLink = styled(Link)`
+//   position: absolute;
+//   margin-left: 10px;
+//   color: #e97f7f;
+// `;
+
+// const StyledSvg = styled(Svg)`
+/* position: relative;
+  bottom: 0; */
+// `;
