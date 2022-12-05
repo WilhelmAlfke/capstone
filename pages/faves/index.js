@@ -42,7 +42,7 @@ const MovieListGrid = styled.ul`
 
 const ListItem = styled.li`
   padding: 0;
-
+  margin-top: 20px;
   position: relative;
 
   margin-bottom: 10px;

@@ -16,16 +16,17 @@ const GlobalStyles = createGlobalStyle`
         
         font-family: "poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background-color: var(--third-color);
+        color: var(--fourth-color);
     }
     
     
-body {
+/* body {
     margin: 0;
-    /* padding: 0; */
-}
-    main {
-margin-top: 0px;
-padding-bottom: 0;
+  padding: 0;
+} */
+    body, main {
+padding: 0;
+margin: 0;
 background-color: var(--third-color);
 
   

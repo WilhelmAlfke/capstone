@@ -3,11 +3,10 @@ import Header from "../components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import { css } from "styled-components";
 import Footer from "../components/Footer";
 import Svg from "../components/Svg";
 
-export default function Home({ movies, toggleFavoriteMovie, variant }) {
+export default function Home({ movies }) {
   const [searchedWord, setSearchedWord] = useState("");
 
   if (!movies) {
@@ -97,14 +96,3 @@ const ListItem = styled.li`
   border-radius: 5px;
   filter: grayscale(60%);
 `;
-
-// const StyledLink = styled(Link)`
-//   position: absolute;
-//   margin-left: 10px;
-//   color: #e97f7f;
-// `;
-
-// const StyledSvg = styled(Svg)`
-/* position: relative;
-  bottom: 0; */
-// `;

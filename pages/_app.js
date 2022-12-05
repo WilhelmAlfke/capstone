@@ -3,7 +3,7 @@ import { useLocalStorage } from "../helpers/hooks.js";
 import moviesDb from "../helpers/db.json";
 import { useState } from "react";
 
-export default function MyApp({ Component, pageProps, variant }) {
+export default function MyApp({ Component, pageProps }) {
   const [movies, setMovies] = useLocalStorage("movies", moviesDb);
 
   function toggleFavoriteMovie(id) {

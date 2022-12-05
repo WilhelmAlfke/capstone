@@ -11,7 +11,13 @@ export default function Footer() {
       <NavLink href={"/faves"} aria-label="Navigate to favorites page">
         <Svg
           variant="faves"
-          color={pathname === "/" ? "var(fifth-color" : "var(primary-color"}
+          color={
+            pathname === "/"
+              ? "var(--fifth-color"
+              : pathname !== "/" || pathname !== "/faves"
+              ? "var(--fifth-color"
+              : "var(--primary-color"
+          }
         />
       </NavLink>
 
@@ -19,7 +25,11 @@ export default function Footer() {
         <Svg
           variant="home"
           color={
-            pathname === "/faves" ? "var(fifth-color)" : "var(--primary-color)"
+            pathname === "/"
+              ? "var(--primary-color)"
+              : pathname !== "/" || pathname !== "/faves"
+              ? "var(--fifth-color)"
+              : "var(--fifth-color)"
           }
         />
       </NavLink>
@@ -38,12 +48,6 @@ const StyledFooter = styled.nav`
   background-color: var(--primary-color);
   z-index: 0;
 `;
-const NavLink = styled(Link)`
-  /* display: flex;
-  position: absolute;
-  margin-left: 170px;
-  margin-top: 6px; */
-  /* color: #e97f7f; */
-`;
+const NavLink = styled(Link)``;
 
 const StyledSvg = styled(Svg)``;
