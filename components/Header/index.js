@@ -10,7 +10,7 @@ export default function Header({ headerTitle, variant }) {
   );
 }
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.div`
   width: 90%;
   height: 60px;
   margin-left: -50px;
@@ -29,7 +29,7 @@ const HeaderContainer = styled.header`
     `}
 `;
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   width: 100%;
   height: 60px;
 

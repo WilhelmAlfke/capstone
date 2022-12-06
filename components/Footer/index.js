@@ -20,7 +20,7 @@ export default function Footer() {
         <Svg
           variant="faves"
           color={
-            pathname === "/" ? "var(--fourth-color)" : "var(--fifth-color)"
+            pathname === "/faves" ? "var(--fifth-color)" : "var(--fourth-color)"
           }
         />
       </Link>

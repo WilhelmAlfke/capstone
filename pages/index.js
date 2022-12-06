@@ -30,7 +30,7 @@ export default function Home({ movies }) {
           <label htmlFor="" />
           <StyledInput
             type="text"
-            placeholder="type in movie title"
+            placeholder="search movie title"
             value={searchedWord}
             onChange={inputHandler}
           />

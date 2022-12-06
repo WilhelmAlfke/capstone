@@ -2,15 +2,16 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "poppins";
     src: url("/fonts/poppins/Poppins-Light.ttf"); 
     
 }
-@font-face {
-    font-family: "prestage";
-    src: ("/fonts/prestage/Prestage Regular.ttf");
-}
+
     html,
     body {
         

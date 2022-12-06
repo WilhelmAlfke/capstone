@@ -54,8 +54,8 @@ export default function MovieDetailPage({
           <StyledSection>
             <StyledParagraph> {movieDetail.year} </StyledParagraph>
             <GenreList>
-              {movieDetail.genre.map((tag) => {
-                return <li key={movieDetail.genre}> {tag} </li>;
+              {movieDetail.genre.map((tag, index) => {
+                return <li key={tag[index]}> {tag} </li>;
               })}
             </GenreList>
 
