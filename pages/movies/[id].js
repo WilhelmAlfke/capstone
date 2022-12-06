@@ -38,7 +38,6 @@ export default function MovieDetailPage({
         </MovieImageContainer>
         <DivContainer>
           <Button
-            href={"#"}
             variant={!movieDetail.isAdded ? "add" : "remove"}
             type="button"
             aria-label="This button lets the user add or remove a movie/series to their favorites"
@@ -46,7 +45,6 @@ export default function MovieDetailPage({
               toggleFavoriteMovie(movieDetail.id);
             }}
           >
-            {" "}
             <StyledButtonSpan>
               {!movieDetail.isAdded ? "add" : "remove"}
             </StyledButtonSpan>
@@ -80,39 +78,14 @@ const MovieImage = styled(Image)`
   position: relative;
   filter: grayscale(60%);
 `;
-
-const MovieImageContainer = styled.div`
-  display: flex;
-  position: relative;
-  width: 100vw;
-  height: 50vw;
-`;
-const StyledParagraph = styled.p`
-  margin: 0;
-`;
-
-const GenreList = styled.ul`
-  padding: 0px;
-
-  display: flex;
-
-  position: relative;
-  list-style: none;
-  gap: 10px;
-`;
-
-const Button = styled(Link)`
-  position: relative;
+const Button = styled.button`
   margin-left: -20px;
   margin-top: -15px;
   transform: skew(45deg);
   width: 25%;
   height: 30px;
   border-style: none;
-  z-index: 5;
-  padding-left: 25px;
-  display: inline-block;
-  text-decoration: none;
+
   box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px 0px;
 
   ${({ variant }) =>
@@ -129,6 +102,26 @@ const Button = styled(Link)`
       color: #7aa2cb;
     `}
 `;
+const MovieImageContainer = styled.div`
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 50vw;
+`;
+
+const StyledParagraph = styled.p`
+  margin: 0;
+`;
+
+const GenreList = styled.ul`
+  padding: 0px;
+
+  display: flex;
+
+  position: relative;
+  list-style: none;
+  gap: 10px;
+`;
 
 const DivContainer = styled.div`
   position: relative;
@@ -136,7 +129,6 @@ const DivContainer = styled.div`
   width: 100%;
   height: 25px;
   background-color: var(--secondary-color);
-  z-index: 0;
 `;
 
 const SectionContainer = styled.div`

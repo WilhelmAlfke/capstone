@@ -55,10 +55,3 @@ const ListItem = styled.li`
   border-radius: 5px;
   filter: grayscale(60%);
 `;
-
-const StyledLink = styled(Link)`
-  position: relative;
-  margin-left: 10px;
-  color: #e97f7f;
-  z-index: 5;
-`;

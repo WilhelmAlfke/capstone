@@ -17,13 +17,13 @@ const GlobalStyles = createGlobalStyle`
         font-family: "poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background-color: var(--third-color);
         color: var(--fourth-color);
+        padding: 0;
+        margin: 0;
     }
     
     
-/* body {
-    margin: 0;
-  padding: 0;
-} */
+
+
     body, main {
 padding: 0;
 margin: 0;
@@ -33,11 +33,10 @@ background-color: var(--third-color);
     
     }
 h1 {
-    position: relative;
-    z-index: 10;
-padding-left: 11px;
-margin-top: -60px;
-font-size: 50px;
+transform: skew(-45deg);
+margin-top: 0;
+margin-left: 60px;
+font-size: 2.5rem;
 font-weight: bold;
 color: var(--primary-color);
 
