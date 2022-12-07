@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
 
 * {
     box-sizing: border-box;
+    font-family: "poppins", "poppins-semi-bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @font-face {
@@ -11,11 +12,15 @@ const GlobalStyles = createGlobalStyle`
     src: url("/fonts/poppins/Poppins-Light.ttf"); 
     
 }
+@font-face {
+    font-family: "poppins-semi-bold";
+    src: url("/fonts/poppins/Poppins-SemiBold.ttf")
+}
 
     html,
     body {
         
-        font-family: "poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        
         background-color: var(--third-color);
         color: var(--fourth-color);
         padding: 0;
@@ -42,7 +47,7 @@ transform: skew(-45deg);
 margin-top: 5px;
 margin-left: 70px;
 font-size: 120%;
-font-weight: bold;
+font-family: poppins-semi-bold;
 color: var(--primary-color);
 
 

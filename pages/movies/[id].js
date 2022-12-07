@@ -96,7 +96,6 @@ const Button = styled.button`
   width: 25%;
   height: 30px;
   border-style: none;
-
   box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px 0px;
 
   ${({ variant }) =>

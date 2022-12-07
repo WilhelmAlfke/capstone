@@ -31,10 +31,14 @@ export default function Home({ movies }) {
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         <StyledSearchBarWrapper>
-          <label htmlFor="search movie title" />
+          <StyledLabel htmlFor="search movie title">
+            search movie title
+          </StyledLabel>
           <StyledInput
+            title="search movie title"
+            role="searchbox"
+            name="search movie title"
             type="text"
-            placeholder="search movie title"
             value={searchedWord}
             onChange={inputHandler}
           />
@@ -66,11 +70,18 @@ export default function Home({ movies }) {
 const StyledSearchBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  margin: 0 25px 0 25px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 35px;
+  padding: 0;
+`;
+
+const StyledLabel = styled.label`
+  font-size: 0.7em;
+  margin-top: 45px;
 `;
 const StyledInput = styled.input`
-  margin-top: 15px;
+  margin-top: 5px;
   border-color: var(--primary-color);
   border-radius: 5px;
   padding: 10px;
