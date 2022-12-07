@@ -9,7 +9,7 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
     <>
       <Head>
-        <title>Artikel verkaufen</title>
+        <title>Watch List</title>
         <meta property="og:title" content="Watch List" key="title" />
       </Head>
       <Header headerTitle="watchlist" variant="faves" />
