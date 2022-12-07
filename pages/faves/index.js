@@ -2,11 +2,17 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import Header from "../../components/Header";
+import Head from "next/head";
+import Footer from "../../components/Footer";
 
 export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
     <>
-      <Header headerTitle="favorites" variant="faves" />
+      <Head>
+        <title>Watch List</title>
+        <meta property="og:title" content="Watch List" key="title" />
+      </Head>
+      <Header headerTitle="watchlist" variant="faves" />
       <MovieListGrid>
         {movies
           .filter((movie) => movie.isAdded)
@@ -24,24 +30,32 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
             </ListItem>
           ))}
       </MovieListGrid>
-
-      <p>
-        <Link href={"/"}>back to home</Link>
-      </p>
+      <Footer />
     </>
   );
 }
 
-const ListItem = styled.li`
-  position: relative;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
-  list-style: none;
-`;
-
 const MovieListGrid = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: space-between;
+  gap: 18px;
+  padding: 0;
+`;
+
+const ListItem = styled.li`
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
+
+  margin-bottom: 10px;
+  width: 125px;
+  height: 125px;
+  list-style: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  filter: grayscale(60%);
 `;

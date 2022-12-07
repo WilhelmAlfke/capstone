@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function Home({ movies }) {
   const [searchedWord, setSearchedWord] = useState("");
@@ -22,20 +24,26 @@ export default function Home({ movies }) {
 
   return (
     <>
+      <Head>
+        <title>Just.Find.It</title>
+        <meta property="og:title" content="Landing page" key="title" />
+      </Head>
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         <StyledSearchBarWrapper>
-          <label htmlFor="">Find movie by title</label>
-          <input
+          <StyledLabel htmlFor="search movie title">
+            search movie title
+          </StyledLabel>
+          <StyledInput
+            title="search movie title"
+            role="searchbox"
+            name="search movie title"
             type="text"
-            placeholder="search movie title"
             value={searchedWord}
             onChange={inputHandler}
           />
         </StyledSearchBarWrapper>
         <MovieListGrid>
-          {/* conditional rendering: wenn sreachedWord (unser seach query) nicht null ist,
-          dann mÃķchten wir die Liste haben.*/}
           {searchedWord.length !== 0 &&
             searchResults.map((movie) => {
               return (
@@ -53,8 +61,8 @@ export default function Home({ movies }) {
               );
             })}
         </MovieListGrid>
-        <Link href="/faves">favorite list</Link>
       </main>
+      <Footer />
     </>
   );
 }
@@ -62,18 +70,44 @@ export default function Home({ movies }) {
 const StyledSearchBarWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 35px;
+  padding: 0;
+`;
+
+const StyledLabel = styled.label`
+  font-size: 0.7em;
+  margin-top: 45px;
+`;
+const StyledInput = styled.input`
+  margin-top: 5px;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 5px;
 `;
 
 const MovieListGrid = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: space-between;
+  gap: 18px;
+  padding: 0;
 `;
 
 const ListItem = styled.li`
+  padding: 0;
+
   position: relative;
-  margin-left: 10px;
+
   margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   list-style: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  filter: grayscale(60%);
 `;
