@@ -26,6 +26,8 @@ const GlobalStyles = createGlobalStyle`
 
 
     body, main {
+        width: 100%;
+        margin-bottom: 60px;
 padding: 0;
 margin: 0;
 background-color: var(--third-color);
@@ -34,10 +36,12 @@ background-color: var(--third-color);
     
     }
 h1 {
+    position: absolute;
+    margin: 0;
 transform: skew(-45deg);
-margin-top: 0;
-margin-left: 60px;
-font-size: 2.5rem;
+margin-top: 5px;
+margin-left: 70px;
+font-size: 120%;
 font-weight: bold;
 color: var(--primary-color);
 

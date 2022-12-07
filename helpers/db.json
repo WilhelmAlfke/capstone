@@ -5,7 +5,8 @@
     "year": "2002",
     "genre": ["Sci-fi", "Romance"],
     "plot": "Plotty-plotplot",
-    "picture": "/img/firefly.jpeg"
+    "picture": "/img/firefly.jpeg",
+    "provider": "Netflix"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "year": "2015",
     "genre": ["Horror"],
     "plot": "In 1630 New England, panic and despair envelops a farmer, his wife and their children when youngest son Samuel suddenly vanishes. The family blames Thomasin, the oldest daughter who was watching the boy at the time of his disappearance. With suspicion and paranoia mounting, twin siblings Mercy and Jonas suspect Thomasin of witchcraft, testing the clan's faith, loyalty and love to one another.",
-    "picture": "/img/vvitch.jpeg"
+    "picture": "/img/vvitch.jpeg",
+    "provider": "Amazon Prime"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "year": "2002",
     "genre": ["Crime"],
     "plot": "This series looks at the narcotics scene in Baltimore through the eyes of law enforcers as well as the drug dealers and users. Other facets of the city that are explored in the series are the government and bureaucracy, schools and the news media. The show was created by former police reporter David Simon, who also wrote many of the episodes.",
-    "picture": "/img/thewire.jpeg"
+    "picture": "/img/thewire.jpeg",
+    "provider": "Netflix"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "year": "1997",
     "genre": ["Sci-fi", "Horror"],
     "plot": "When the Event Horizon, a spacecraft that vanished years earlier, suddenly reappears, a team is dispatched to investigate the ship. Accompanied by the Event Horizon's creator, William Weir (Sam Neill), the crew of the Lewis and Clark, led by Capt. Miller (Laurence Fishburne), begins to explore the seemingly abandoned vessel. However, it soon becomes evident that something sinister resides in its corridors, and that the horrors that befell the Event Horizon's previous journey are still present.",
-    "picture": "/img/eventhorizon.jpeg"
+    "picture": "/img/eventhorizon.jpeg",
+    "provider": "Disney+"
   },
   {
     "id": "5",
@@ -37,7 +41,8 @@
     "year": "2014",
     "genre": ["Comedy", "Satire", "Cartoon"],
     "plot": "A humanoid horse, BoJack Horseman -- lost in a sea of self-loathing and booze -- decides it's time for a comeback. Once the star of a '90s sitcom, in which he was the adoptive father of three orphaned kids (two girls and a boy). The show was the hottest thing around, then suddenly, was canceled. Now 18 years later, BoJack wants to regain his dignity. With the aid of a human sidekick and a feline ex-girlfriend who is his agent, he sets out to make it happen. But Hollywood is vastly different from those days, and getting used to stuff like Twitter may take some time. This first animated series from Netflix -- with plenty of references to sex, drugs and alcohol -- is not for the little ones.",
-    "picture": "/img/bojack.jpeg"
+    "picture": "/img/bojack.jpeg",
+    "provider": "Netflix"
   },
   {
     "id": "6",
@@ -45,7 +50,8 @@
     "year": "2019",
     "genre": ["Horror"],
     "plot": "A young American couple, their relationship foundering, travel to a fabled Swedish midsummer festival where a seemingly pastoral paradise transforms into a sinister, dread-soaked nightmare as the locals reveal their terrifying agenda.",
-    "picture": "/img/midsommar.jpeg"
+    "picture": "/img/midsommar.jpeg",
+    "provider": "Amazon Prime"
   },
   {
     "id": "7",
@@ -53,6 +59,25 @@
     "year": "1980",
     "genre": ["Fantasy"],
     "plot": "The adventure continues in this 'Star Wars' sequel. Luke Skywalker (Mark Hamill), Han Solo (Harrison Ford), Princess Leia (Carrie Fisher) and Chewbacca (Peter Mayhew) face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi master's help will Luke survive when the dark side of the Force beckons him into the ultimate duel with Darth Vader (David Prowse).",
-    "picture": "/img/episodev.jpeg"
+    "picture": "/img/episodev.jpeg",
+    "provider": "Disney+"
+  },
+  {
+    "id": "8",
+    "title": "His Dark Materials",
+    "year": "2019",
+    "genre": ["Fantasy", "Adventure", "Kids"],
+    "plot": "During her search for a kidnapped friend, a seemingly ordinary but brave young woman from another world uncovers a sinister plot involving stolen children and a mysterious phenomenon called Dust.",
+    "picture": "/img/hisdark.jpeg",
+    "provider": "WOW"
+  },
+  {
+    "id": "9",
+    "title": "The Marvelous Mrs. Maisel",
+    "year": "2017",
+    "genre": ["Comedy"],
+    "plot": "It's the late 1950s and Miriam 'Midge' Maisel has everything she has ever wanted -- the perfect husband, two kids and an elegant apartment on New York's Upper West Side. Her seemingly idyllic life takes a surprising turn when she discovers a hidden talent she didn't previously know she had -- stand-up comedy. This revelation changes her life forever as she begins a journey that takes her from her comfortable life on the Upper West Side through the cafes and nightclubs of Greenwich Village as she makes her way through the city's comedy industry on a path that could ultimately lead her to a spot on the 'Tonight Show' couch. ",
+    "picture": "/img/msmaisel.jpeg",
+    "provider": "Amazon Prime"
   }
 ]

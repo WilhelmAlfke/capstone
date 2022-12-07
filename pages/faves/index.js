@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import Header from "../../components/Header";
-import Svg from "../../components/Svg";
+
 import Footer from "../../components/Footer";
 
 export default function Faves({ movies, toggleFavoriteMovie }) {

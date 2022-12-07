@@ -30,11 +30,12 @@ export default function Footer() {
 
 const StyledFooter = styled.nav`
   position: fixed;
+  background-color: #ede9e8;
   bottom: 0;
   width: 100vw;
   height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--primary-color);
+  border-top: solid 1.8px;
 `;

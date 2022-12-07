@@ -11,6 +11,7 @@ export default function Header({ headerTitle, variant }) {
 }
 
 const HeaderContainer = styled.div`
+  position: relative;
   width: 90%;
   height: 60px;
   margin-left: -50px;

@@ -49,6 +49,7 @@ export default function MovieDetailPage({
               {!movieDetail.isAdded ? "add" : "remove"}
             </StyledButtonSpan>
           </Button>
+          <StyledP> Find it on {movieDetail.provider}</StyledP>
         </DivContainer>
         <SectionContainer>
           <StyledSection>
@@ -73,6 +74,7 @@ export default function MovieDetailPage({
 }
 const StyledDetailMain = styled.main`
   background-color: var(--third-color);
+  margin-bottom: 70px;
 `;
 const MovieImage = styled(Image)`
   position: relative;
@@ -131,14 +133,22 @@ const DivContainer = styled.div`
   background-color: var(--secondary-color);
 `;
 
+const StyledP = styled.p`
+  position: relative;
+  margin-top: -22px;
+  margin-left: 165px;
+  font-size: 0.8em;
+`;
+
 const SectionContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
 `;
 const StyledSection = styled.section`
+  font-size: 0.9em;
   position: relative;
-  line-height: 1.2rem;
+  line-height: 1.2em;
   margin: 10px 45px;
   width: 70%;
   padding: 1rem;
