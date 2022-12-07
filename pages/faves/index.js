@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
     <>
-      <Header headerTitle="favorites" variant="faves" />
+      <Header headerTitle="watchlist" variant="faves" />
       <MovieListGrid>
         {movies
           .filter((movie) => movie.isAdded)

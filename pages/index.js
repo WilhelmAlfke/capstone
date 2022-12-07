@@ -27,7 +27,7 @@ export default function Home({ movies }) {
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         <StyledSearchBarWrapper>
-          <label htmlFor="" />
+          <label htmlFor="search movie title" />
           <StyledInput
             type="text"
             placeholder="search movie title"

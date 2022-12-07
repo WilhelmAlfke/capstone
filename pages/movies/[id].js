@@ -113,6 +113,7 @@ const MovieImageContainer = styled.div`
 
 const StyledParagraph = styled.p`
   margin: 0;
+  color: var(--fourth-color);
 `;
 
 const GenreList = styled.ul`
@@ -138,6 +139,7 @@ const StyledP = styled.p`
   margin-top: -22px;
   margin-left: 165px;
   font-size: 0.8em;
+  color: var(--third-color);
 `;
 
 const SectionContainer = styled.div`
