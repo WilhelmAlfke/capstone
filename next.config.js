@@ -13,7 +13,7 @@ const nextConfig = {
       // },
     ],
   },
-  i18n: { locales: ["en"], defaultLocale: ["en"] },
+  i18n: { locales: ["en-US"], defaultLocale: "en-US" },
 };
 
 module.exports = nextConfig;

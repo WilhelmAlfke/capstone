@@ -84,7 +84,7 @@ const StyledInput = styled.input`
   margin-top: 5px;
   border-color: var(--primary-color);
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const MovieListGrid = styled.ul`
