@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import Svg from "../components/Svg";
+import Head from "next/head";
 
 export default function Home({ movies }) {
   const [searchedWord, setSearchedWord] = useState("");
@@ -24,6 +24,10 @@ export default function Home({ movies }) {
 
   return (
     <>
+      <Head>
+        <title>Just.Find.It</title>
+        <meta property="og:title" content="Startseite" key="title" />
+      </Head>
       <Header headerTitle="just find it" variant="homepage" />
       <main>
         <StyledSearchBarWrapper>
