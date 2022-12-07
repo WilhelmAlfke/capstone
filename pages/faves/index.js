@@ -2,12 +2,16 @@ import styled from "styled-components";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import Header from "../../components/Header";
-
+import Head from "next/head";
 import Footer from "../../components/Footer";
 
 export default function Faves({ movies, toggleFavoriteMovie }) {
   return (
     <>
+      <Head>
+        <title>Artikel verkaufen</title>
+        <meta property="og:title" content="Watch List" key="title" />
+      </Head>
       <Header headerTitle="watchlist" variant="faves" />
       <MovieListGrid>
         {movies

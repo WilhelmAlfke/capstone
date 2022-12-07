@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Svg from "../../components/Svg";
+import Head from "next/head";
 
 export default function MovieDetailPage({
   movies,
@@ -25,6 +26,14 @@ export default function MovieDetailPage({
 
   return (
     <>
+      <Head>
+        <title>Details</title>
+        <meta
+          property="og:title"
+          content="Details of a movie or series"
+          key="title"
+        />
+      </Head>
       <Header headerTitle={movieDetail.title} variant="detailpage" />
       <StyledDetailMain>
         <MovieImageContainer>
