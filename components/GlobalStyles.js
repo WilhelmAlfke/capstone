@@ -64,7 +64,7 @@ h2 {
 :root {
     --primary-color: #9eb5b3; 
     --secondary-color: #475e76;
-    --third-color: #EDE9E8;
+    --third-color: #9eb5b3;
     --fourth-color: #231F20;
     --fifth-color: #e97f7f;
 }
