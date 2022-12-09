@@ -36,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
 padding: 0;
 margin: 0;
 background-color: var(--third-color);
+  margin-bottom: 70px;
 
   
     
@@ -56,6 +57,8 @@ color: var(--primary-color);
 h2 {
     padding-left: 10px;
     margin-top: 40px;
+    margin-left: 25px;
+    font-size: 0.8rem;
 }
 
 :root {

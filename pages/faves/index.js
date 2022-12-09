@@ -13,23 +13,31 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
         <meta property="og:title" content="Watch List" key="title" />
       </Head>
       <Header headerTitle="watchlist" variant="faves" />
-      <MovieListGrid>
-        {movies
-          .filter((movie) => movie.isAdded)
-          .map((movie) => (
-            <ListItem key={movie.id} toggleFavoriteMovie={toggleFavoriteMovie}>
-              <Link href={`/movies/${movie.id}`}>
-                <Image
-                  layout="fill"
-                  objectFit="cover"
-                  priority
-                  alt={`movieposter of ${movie.title}`}
-                  src={movie.picture}
-                />
-              </Link>
-            </ListItem>
-          ))}
-      </MovieListGrid>
+      <main>
+        {movies.length === 0}
+        <h2>0 movies added...</h2>
+        <MovieListGrid>
+          {movies
+            .filter((movie) => movie.isAdded)
+            .map((movie) => (
+              <ListItem
+                key={movie.id}
+                toggleFavoriteMovie={toggleFavoriteMovie}
+              >
+                <Link href={`/movies/${movie.id}`}>
+                  <Image
+                    layout="fill"
+                    objectFit="cover"
+                    priority
+                    alt={`movieposter of ${movie.title}`}
+                    src={movie.picture}
+                  />
+                </Link>
+                <StyledTitleParagraph>{movie.title}</StyledTitleParagraph>
+              </ListItem>
+            ))}
+        </MovieListGrid>
+      </main>
       <Footer />
     </>
   );
@@ -48,7 +56,6 @@ const ListItem = styled.li`
   padding: 0;
   margin-top: 20px;
   position: relative;
-
   margin-bottom: 10px;
   width: 125px;
   height: 125px;
@@ -58,4 +65,15 @@ const ListItem = styled.li`
   border-color: var(--primary-color);
   border-radius: 5px;
   filter: grayscale(60%);
+`;
+
+const StyledTitleParagraph = styled.p`
+  color: var(--fourth-color);
+  margin-top: 120px;
+  z-index: 10;
+  font-size: 0.6em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
 `;

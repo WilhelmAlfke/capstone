@@ -35,7 +35,7 @@ export default function MovieDetailPage({
         />
       </Head>
       <Header headerTitle={movieDetail.title} variant="detailpage" />
-      <StyledDetailMain>
+      <main>
         <MovieImageContainer>
           <MovieImage
             objectFit="cover"
@@ -72,7 +72,7 @@ export default function MovieDetailPage({
             <StyledParagraph> {movieDetail.plot} </StyledParagraph>
           </StyledSection>
         </SectionContainer>
-      </StyledDetailMain>
+      </main>
       <Footer>
         <StyledLink href="/" aria-label="Navigate to landing page">
           <Svg variant="home" />
@@ -81,10 +81,7 @@ export default function MovieDetailPage({
     </>
   );
 }
-const StyledDetailMain = styled.main`
-  background-color: var(--third-color);
-  margin-bottom: 70px;
-`;
+
 const MovieImage = styled(Image)`
   position: relative;
   filter: grayscale(60%);
