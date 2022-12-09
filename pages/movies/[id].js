@@ -33,6 +33,7 @@ export default function MovieDetailPage({
           content="Details of a movie or series"
           key="title"
         />
+        <Link rel="icon" href="/logo.ico" />
       </Head>
       <Header headerTitle={movieDetail.title} variant="detailpage" />
       <main>

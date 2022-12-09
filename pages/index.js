@@ -27,6 +27,7 @@ export default function Home({ movies }) {
       <Head>
         <title>Just.Find.It</title>
         <meta property="og:title" content="Landing page" key="title" />
+        <Link rel="icon" href="/logo.ico" />
       </Head>
       <Header headerTitle="just find it" variant="homepage" />
       <main>

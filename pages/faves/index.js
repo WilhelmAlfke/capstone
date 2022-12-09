@@ -11,6 +11,7 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
       <Head>
         <title>Watch List</title>
         <meta property="og:title" content="Watch List" key="title" />
+        <Link rel="icon" href="/logo.ico" />
       </Head>
       <Header headerTitle="watchlist" variant="faves" />
       <main>
