@@ -15,8 +15,8 @@ export default function Faves({ movies, toggleFavoriteMovie }) {
       </Head>
       <Header headerTitle="watchlist" variant="faves" />
       <main>
-        {movies.length === 0}
-        <h2>0 movies added...</h2>
+        {/* {movies.length === 0}
+        <h2>0 movies added...</h2> */}
         <MovieListGrid>
           {movies
             .filter((movie) => movie.isAdded)

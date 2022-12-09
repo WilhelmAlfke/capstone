@@ -44,8 +44,8 @@ export default function Home({ movies }) {
             onChange={inputHandler}
           />
         </StyledSearchBarWrapper>
-        {searchedWord.length === 0}
-        <h2>0 movies found..</h2>
+        {/* {searchedWord.length === 0}
+        <h2>movies. movies found..</h2> */}
         <MovieListGrid>
           {searchedWord.length !== 0 &&
             searchResults.map((movie) => {

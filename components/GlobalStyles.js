@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
         
         
         background-color: var(--third-color);
-        color: var(--fourth-color);
+        /* color: var(--fourth-color); */
         padding: 0;
         margin: 0;
     }
@@ -64,7 +64,7 @@ h2 {
 :root {
     --primary-color: #9eb5b3; 
     --secondary-color: #475e76;
-    --third-color: #9eb5b3;
+    --third-color: #ede9e8;
     --fourth-color: #231F20;
     --fifth-color: #e97f7f;
 }
