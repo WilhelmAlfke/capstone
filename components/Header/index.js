@@ -4,7 +4,7 @@ export default function Header({ headerTitle, variant }) {
   return (
     <StyledHeader variant={variant}>
       <HeaderContainer variant={variant}>
-        <h1>{headerTitle} </h1>
+        <Styledh1>{headerTitle} </Styledh1>
       </HeaderContainer>
     </StyledHeader>
   );
@@ -45,4 +45,10 @@ const StyledHeader = styled.header`
     css`
       background-color: var(--fourth-color);
     `}
+`;
+
+const Styledh1 = styled.h1`
+  margin-left: 80px;
+  margin-top: 14px;
+  font-size: 2em;
 `;
