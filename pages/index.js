@@ -27,6 +27,7 @@ export default function Home({ movies }) {
       <Head>
         <title>Just.Find.It</title>
         <meta property="og:title" content="Landing page" key="title" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Header headerTitle="just find it" variant="homepage" />
       <main>
@@ -43,8 +44,8 @@ export default function Home({ movies }) {
             onChange={inputHandler}
           />
         </StyledSearchBarWrapper>
-        {searchedWord.length === 0}
-        <h2>0 movies found..</h2>
+        {/* {searchedWord.length === 0}
+        <h2>movies. movies found..</h2> */}
         <MovieListGrid>
           {searchedWord.length !== 0 &&
             searchResults.map((movie) => {
